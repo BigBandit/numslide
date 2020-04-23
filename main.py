@@ -1,19 +1,11 @@
 from player import *
 
-<<<<<<< HEAD
-p1 = player(10)  # shufNum
-
-
-pygame.display.set_caption("NumSlide")
-
-=======
-p1 = player([10])  # shufNum
+p1 = player([256])  # shufNum
 
 pygame.display.set_caption("NumSlide")
 
 playerInControl = True
 
->>>>>>> 55442efeb516725dcd7e4c76ceba67b527104d83
 
 run = True
 while run:
@@ -21,11 +13,7 @@ while run:
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			run = False
-<<<<<<< HEAD
-		if event.type == pygame.KEYDOWN:
-=======
 		if event.type == pygame.KEYDOWN and playerInControl:
->>>>>>> 55442efeb516725dcd7e4c76ceba67b527104d83
 			if event.key == pygame.K_UP:
 				p1.move(2)
 			if event.key == pygame.K_LEFT:

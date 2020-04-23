@@ -17,7 +17,6 @@ class numSlide():
 		self.curGrid = [[0]*self.size for _ in range(self.size)]
 		self.solved = False
 		self.shuffle = []
-		self.initGrid()
 		self.initGrid(shufNum)
 		self.moves = []
 		self.movesString = []
