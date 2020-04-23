@@ -1,36 +1,13 @@
 from player import *
+from model import *
+import sys
 
-p1 = player([256])  # shufNum
+m1 = model()
+p1 = player([256],m1)  # shufNum
 
 pygame.display.set_caption("NumSlide")
 
-playerInControl = True
-
-
-run = True
-while run:
-	pygame.time.delay(10)
-	for event in pygame.event.get():
-		if event.type == pygame.QUIT:
-			run = False
-		if event.type == pygame.KEYDOWN and playerInControl:
-			if event.key == pygame.K_UP:
-				p1.move(2)
-			if event.key == pygame.K_LEFT:
-				p1.move(3)
-			if event.key == pygame.K_DOWN:
-			    p1.move(0)
-			if event.key == pygame.K_RIGHT:
-				p1.move(1)
-
-	p1.drawGrid()
-	if p1.check():     
-		print('Score: ' + str(p1.score()))
-		run = False
-
-	pygame.display.update()
-
-pygame.quit()
+p1.play()
 
 print('Original Grid: ' + str(p1.game.origGrid))
 print()
